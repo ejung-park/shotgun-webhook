@@ -1,6 +1,7 @@
-const express = require('express')
-const db = require('./data/db.js')
-const app = express()
+const express = require('express');
+const db = require('./data/db.js');
+const PORT = process.env.PORT;
+const app = express();
 
 app.use(express.json())  // request body를 사용하기 위함
 app.use(express.static('public')) // static file을 사용하기 위함
