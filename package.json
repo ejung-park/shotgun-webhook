@@ -2,9 +2,9 @@
   "name": "shotgun-webhook",
   "version": "1.0.0",
   "description": "shotgun webhook test",
-  "main": "webhook.js",
+  "main": "index.js",
   "scripts": {
-    "start": "webhook.js",
+    "start": "index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
