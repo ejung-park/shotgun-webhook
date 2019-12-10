@@ -17,17 +17,22 @@ app.route('/api/folder')
         res.json(result)
     })
     .post(async (req, res) => {
-        const result = {success: true}
-        const folder = req.body.folder // 입력 받은 폴더 정보
-        try {
-          const json = await db.getData() // 데이터 읽어오기
-          json.folder = folder  // 데이터 수정
-          await db.setData(json) // 데이터 반영
-        } catch (err) {
-          result.success = false
-          result.err = err
-        }
-        res.json(result) // 결과 출력
+      var con = "postgres://nrwxoqndcmnssw:50a27b4a4e5419b5da3d0ecd074d62235b0f536c8a33841456a2c3ee14c2ba1d@ec2-23-21-148-223.compute-1.amazonaws.com:5432/d7v4ta77be36ns";
+      pg.connect(con, function (err, client) {
+          var qstr = "insert into sg_data (data) values($data);";
+          var query = client.query(qstr, [req.body]);
+          query.on('end', function (row, err) {
+              response.redirect("/");
+          });
+          query.on('error', function (error) {
+              console.log("ERROR!");
+              response.render('index', {
+                  title: "ERROR",
+                  data: null,
+                  message: "ERROR is occured!"
+              });
+          });
+      });
       })
 
 var port = process.env.PORT || 3000; //*
