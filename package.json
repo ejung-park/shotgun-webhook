@@ -2,7 +2,7 @@
   "name": "shotgun-webhook",
   "version": "1.0.0",
   "description": "shotgun webhook test",
-  "main": "app.js",
+  "main": "webhook.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
