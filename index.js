@@ -8,17 +8,17 @@ app.listen(3000)
 
 
 // routing
-app.route('/api/folder')
+app.route('/api/tasks')
     .get(async (req, res) => {
         const result = {success: true}
+        var args = req;
         try {
-            const json = await db.getData()
-            result.data = json.folder
+           console.log(args);
         } catch (err) {
             result.success = false
             result.err = err
         }
-        res.json(result)
+        res.json(args)
     })
     .post(async (req, res) => {
         const result = {success: true}

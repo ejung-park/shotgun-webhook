@@ -1,23 +1,11 @@
 {
-  "name": "restful",
+  "name": "shotgun-webhook",
   "version": "1.0.0",
-  "description": "",
+  "description": "shotgun webhook test",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ejung-park/restfull.git"
-  },
-  "author": "park e jung",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ejung-park/restfull/issues"
-  },
-  "homepage": "https://github.com/ejung-park/restfull#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.1"
-  }
+  "author": "",
+  "license": "ISC"
 }
